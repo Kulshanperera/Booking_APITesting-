@@ -5,7 +5,7 @@ Here is the workflow for booking API Testing
 
 * API, Request types, Collections and Folders.
 
-API - is an application programming interface, it enables 2 software components to communication with each other using set of definitions and protocol
+API -  is an application programming interface, it enables 2 software components to communicate with each other using a set of definitions and protocol
 
 this API uses the following URL to do the CRUD operations - https://restful-booker.herokuapp.com/booking 
 and blow are the REST API request types
