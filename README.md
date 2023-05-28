@@ -3,7 +3,9 @@ Here is the workflow for booking API Testing
 
 **Chapter 01**
 
-* API, Request types, Collections and Folders. below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
+* API, Request types, Collections and Folders. 
+
+Below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
 
 API - is an application programming interface, it enables 2 software components to communication with each other using set of definitions and protocol
 
