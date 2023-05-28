@@ -27,11 +27,12 @@ fname and name getting from environment variable
 Enviromental variables
 fname,lname and last create booking id
 
-code to create dynamic varible id and assing it to b_Id
+code to create dynamic varible b_Id(Created test scripts in Post request)
 
+```
 var jsonData = pm.response.json();//pm access response and request data and set it to the variable
 pm.environment.set("b_Id", jsonData.bookingid);//assign booking id to an environment variable(b_Id) and create it
-
+```
 
 ![2023-05-28 16 57 15](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/13bd6e72-c66e-4731-9085-b1dda4ed5892)
 
