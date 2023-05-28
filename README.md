@@ -3,16 +3,16 @@ Here is the workflow for booking API Testing
 
 **Chapter 01**
 
-* API, Request types, Collections and Folders. 
-
-Below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
-
-![2023-05-27 20 44 22](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/bd944184-de24-4f01-85b7-d69cd717f5fc)
+* API, Request types, Collections and Folders.
 
 API - is an application programming interface, it enables 2 software components to communication with each other using set of definitions and protocol
 
 this API uses following URL to do the CRUD operations - https://restful-booker.herokuapp.com/ 
 and blow are the REST API request types
+
+Below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
+
+![2023-05-27 20 44 22](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/bd944184-de24-4f01-85b7-d69cd717f5fc)
 
 Get - Select booking data using id
 
