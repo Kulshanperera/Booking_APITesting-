@@ -7,7 +7,7 @@ Here is the workflow for booking API Testing
 
 API - is an application programming interface, it enables 2 software components to communication with each other using set of definitions and protocol
 
-this API uses following URL to do the CRUD operations - https://restful-booker.herokuapp.com/ 
+this API uses following URL to do the CRUD operations - https://restful-booker.herokuapp.com/booking 
 and blow are the REST API request types
 
 Below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
