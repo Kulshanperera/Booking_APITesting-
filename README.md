@@ -27,7 +27,7 @@ fname and name getting from environment variable
 Enviromental variables
 fname,lname and last create booking id
 
-code to create dynamic varible b_Id(Created test scripts in Post request)
+code to create dynamic varible b_Id and store it(Created test scripts in Post Request)
 
 ```
 var jsonData = pm.response.json();//pm access response and request data and set it to the variable
