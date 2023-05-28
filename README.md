@@ -10,13 +10,29 @@ API - is an application programming interface, it enables 2 software components 
 this API uses following URL to do the CRUD operations - https://restful-booker.herokuapp.com/booking 
 and blow are the REST API request types
 
-Below one is the interface of Postman, that have the request types, collection name and folders used for the API Test
+Below the interface is the request types, collection name and folders used for the API Test
 
 ![2023-05-27 20 44 22](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/bd944184-de24-4f01-85b7-d69cd717f5fc)
 
 Get - Select booking data using id
 
+![2023-05-28 16 50 56](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/5d9a069d-4e1c-4023-90cf-fe89d7ad81df)
+
 Post - Create a new booking in the database and generate id
+
+fname and name getting from environment variable
+
+![2023-05-28 16 52 38](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/40eacbd1-d070-4f34-992b-d73d9f13c187)
+
+Enviromental variables
+fname,lname and last create booking id
+![2023-05-28 16 57 15](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/13bd6e72-c66e-4731-9085-b1dda4ed5892)
+
+
+Get- Get Booking details created in above step 
+
+![2023-05-28 16 55 12](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/e3ebde4c-36b0-47e1-b56a-4b9dddf6260d)
+
 
 Post/token Generator - access login and generate a token to update it
 
@@ -26,7 +42,6 @@ Delete - Delete data using id (authenticate delete operation using a token)
 
 
 * Web Services and types
-
 
 
 
