@@ -36,7 +36,7 @@ Here is the workflow for booking API Testing
 * Difference between patch and put
 * Verify Json Schema
 
-**Chapter 06****
+**Chapter 06**
 
 * Data dirven testing using JSON file
 * Data dirven testing using CSV file
