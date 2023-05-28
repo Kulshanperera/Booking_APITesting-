@@ -3,10 +3,23 @@ Here is the workflow for booking API Testing
 
 **Chapter 01**
 
-* API types
+* API, Request types, Collections and Folders.
+
+Get - Select booking data using id
+
+Post - Create a new booking in the database and generate id
+
+Post/token Generator - access login and generate a token to update it
+
+Put - Use the token as an authenticator to access and update the required data
+
+Delete - Delete data using id (authenticate delete operation using a token)
+
+
 * Web Services and types
-* Collections and folders
-* Request types
+
+
+
 
 **Chapter 02**
 
