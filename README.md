@@ -112,21 +112,53 @@ pm.environment.set("b_Id", jsonData.bookingid);//assign booking id to an environ
 **Chapter 03**
 
 * JSON Assertions
+
+```
+pm.test("status code is 200", function (){
+    pm.response.to.have.status(200);
+});
+```
+```
+varv = pm.response.json(); //reading the api response and store in variable as a json object 
+pm.test("Verfy the response",function(){
+    pm.expect(v.firstname).to.eql("Thilith"); //assert the results
+});
+```
+```
+var p = pm.response.json();
+pm.test("Verify the total price",function(){
+    pm.expect(p.totalprice).to.eql(1000); 
+});
+```
+```
+var c =pm.response.json();
+pm.test("Verify checking date",function() {
+    pm.expect(c.bookingdates.checkin).to.eql("2018-01-01");//access json object inside the another json oject 
+});
+```
+Test Results
+
+![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/b24f5b37-c5d3-403c-9eca-cb83a6a6d34c)
+
+
 * Curl Command
-* execute collection
-* Excule tests script from execution
-* export collection
+
+Export API request into the CURL (</> button in Postman) command and export it to another API collection like the DEV environment
+(Client URL enable the pass the data between the device and server through the command line interface)
+when importing click the import button on top of the Postman, click row text, paste the command, click continue and click import
+
 
 **Chapter 04**
 
 * Install Newman
 
-installation 
-$ npm install -g newman //newman --version - check Version
+_installation_
+
+**$ npm install -g newman //newman --version - check Version**
 
 * Execute postman collection using Newman
 
-$ newman run collectionFileName.json -e environmenrVariableFileName.json  //run collection using CMD -e including an environment file  
+**$ newman run collectionFileName.json -e environmenrVariableFileName.json  //run collection using CMD -e including an environment file**
 
 * generate standard html report using Newman
 
@@ -134,29 +166,144 @@ Reporters with Newman Install the reporter package
 
 $ npm install -g newman-reporter-html //simple report
 
-Run
-$ newman run /path/to/collection.json -r cli,html
+_Run_
+
+**$ newman run /path/to/collection.json -r cli,html**
 
 Reporters with Newman Install the reporter package
-$ npm install -g newman-reporter-html //simple report
 
-Run
-$ newman run /path/to/collection.json -r cli,html
+**$ npm install -g newman-reporter-html //simple report**
+
+_Run_
+
+**$ newman run /path/to/collection.json -r cli,html**
 
 * generate detailed report using Newman
 
 Interactive Example report
+
 To globally install the htmlextra package:
-$ npm install -g newman-reporter-htmlextra
+
+**$ npm install -g newman-reporter-htmlextra**
 
 excute collection using advance HTML report
-$ newman run collectionName.json -r htmlextra --reporters-cli,htmlextra
+
+**$ newman run collectionName.json -r htmlextra --reporters-cli,htmlextra**
 
 **Chapter 05**
 
-* Patch API
+* Patch Request
+
+Patch request modify the data in the applicaiton server 
+
 * Difference between patch and put
+
+Patch request modify the data in the applicaiton server 
+
+it request to update partial data in the server
+
+//for PUT request when updating the firstname and lastname we sending request body as a blow data
+```
+{
+    "firstname": "Thilith",
+    "lastname": "Perera",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2023-05-15"
+    },
+    "additionalneeds": "Breakfast"
+}
+```
+//for PATCH request when updating the firstname and lastname we sending request body as a blow data only specific data fields
+and it saving more data intead to sending whole data as a request.
+```
+{
+    "firstname": "AB",
+    "lastname": "CD"
+
+}
+```
+
 * Verify JSON Schema
+
+Validate field getting correct data type when getting the response when request get method
+
+```
+//below is Postman response from get method 
+{
+    "firstname": "Thilith",
+    "lastname": "Perera",
+    "totalprice": 1000,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}
+```
+
+```
+//blow Json schema validaion with Json Oject (response by server/above response)
+const expectedJSONSchema =
+{
+  "type": "object",
+  "properties": {
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "totalprice": {
+      "type": "integer"
+    },
+    "depositpaid": {
+      "type": "boolean"
+    },
+    "bookingdates": {
+      "type": "object",
+      "properties": {
+        "checkin": {
+          "type": "string"
+        },
+        "checkout": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "checkin",
+        "checkout"
+      ]
+    },
+    "additionalneeds": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "firstname",
+    "lastname",
+    "totalprice",
+    "depositpaid",
+    "bookingdates",
+    "additionalneeds"
+  ]
+};
+
+```
+```
+pm.test("Json Schema Validation", function(){
+    pm.response.to.have.jsonSchema(expectedJSONSchema);//pm.response.to.have.jsonSchema - this part covert the response to jsonSchema
+
+});
+
+```
+
+Test result 
+
+![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/08592a14-9a5d-409c-b049-7ca38ccd2948)
 
 **Chapter 06**
 
@@ -166,6 +313,31 @@ $ newman run collectionName.json -r htmlextra --reporters-cli,htmlextra
 **Chapter 07**
 
 * Install Jenkins
+* 
+should have requirnment Java 11 or 17
+
 * Run Postman collections using Jenkins
+
+
 * CRON pattern 
+
+Use cron pattern to schedule the jobs in jenkings
+
+* - Single Star - minitues (0,59)
+** - Double - hours (1,23)
+*** - Thirple - days of a month (1-31)
+**** - Quadruple - Month (1- 12)
+***** - Quintuple - Day of the week (1-7/Monday to Sunday)
+
+Jenkings - > configure - > Build triggers -> Build Periodically -> schedule -> */1 * * * * 
+//including space /1 is indicate to build it every minite 
+
+
 * Run Newman and generate html report using Jenkins
+
+should have configure node path as a system varable to access to Newman commad in jenkings
+run api collection and generate report using newman in jenkings
+
+Create a windown batfile using below command
+newman run "CollectionfilePath\\FileName.json" -e "environmentFilePath\\FileName.json" --reporters=cli,htmlextra
+
