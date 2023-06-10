@@ -24,6 +24,13 @@ fname and name getting from the environment variable
 Step 3 : Get- Get Booking details created in above step 2
 Access id environmental variable using {{b_Id}}
 
+```
+//Script for b_Id varable creation
+var jsonData = pm.response.json();
+pm.environment.set("b_Id", jsonData.bookingid);//assign bookingid response value to b_Id as environment varable
+
+```
+
 ![2023-05-28 16 55 12](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/e3ebde4c-36b0-47e1-b56a-4b9dddf6260d)
 
 
@@ -51,3 +58,10 @@ Step 6: Delete - Delete data using id (authenticate delete operation using a tok
 
 
 * Web Services and types
+
+Web service is a software package that enables the communication between two devices or web entities over the internet.
+
+Types
+
+* SOAP web services
+* REST web services
