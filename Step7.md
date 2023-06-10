@@ -11,7 +11,7 @@ should have requirnment Java 11 or 17
 
 Use cron pattern to schedule the jobs in jenkings
 
-* - Single Star - minitues (0,59)
+*- Single Star - minitues (0,59)
 
 ** - Double - hours (1,23)
 
