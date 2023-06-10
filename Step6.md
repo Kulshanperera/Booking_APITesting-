@@ -1,8 +1,8 @@
-**Chapter 06**
+**Step 06**
 
 * Data-driven testing using JSON file
 
-Getting firstname and lastname from the external data(Json) file. it able to pass multiple booking creation post request(CreateBookingWithFile), in here only use first name and last name fields.
+Getting firstname and lastname from the external data(JSON) file. it is able to pass multiple booking creations through the post request(CreateBookingWithFile), in here only uses first name and last name fields.
 
 below is json file data (3 json objects/File Name - PostManDataDrivenTestingFile.json) 
 
@@ -50,7 +50,7 @@ Below the success results
 //Test script for validate results
 
 var fname = pm.variables.get("fname");
-var lname  = pm.variables.get("lname");//reading the data variable from externak file
+var lname  = pm.variables.get("lname");//reading the data variable from external file
 
 var d = pm.response.json();
 pm.test("Validate Firstname from external file", function(){
@@ -62,4 +62,5 @@ pm.test("Validate Lastname from external file", function(){
 });
 
 ```
-* Data-driven testing using CSV file - same way entering the data to an excel file then saving it as a CSV data file
+* Data-driven testing using CSV file 
+Followed the same steps this have done entering the data to an Excel file and then saving it as a CSV data file
