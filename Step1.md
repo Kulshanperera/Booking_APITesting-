@@ -37,7 +37,7 @@ pm.environment.set("b_Id", jsonData.bookingid);//assign bookingid response value
 Step 4: Post/token Generator - to generate a token and update or delete data using the token (token identifies the resource user URL - https://restful-booker.herokuapp.com/auth)
 
 ```
-//script to create token as a enviromental variable and add it as an aheader value in the reuest 
+//script to create token as a enviromental variable and add it as an header value in the reuest 
 
 var tokenData = pm.response.json();
 pm.environment.set("Token", tokenData.token);
