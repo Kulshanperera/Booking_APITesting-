@@ -43,9 +43,39 @@ pm.environment.set("b_Id", jsonData.bookingid);//assign booking id to an environ
 ![2023-05-28 16 57 15](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/13bd6e72-c66e-4731-9085-b1dda4ed5892)
 
 * Assertions - status code, response body, response header, response time
+
 ```
+//status code
 //Assert the response code 
-  pm.test("Status code is 400", function () {
-    pm.response.to.have.status(400);
+  pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
 });
 ```
+
+```
+pm.test("Content-Type is present", function () {
+    pm.response.to.have.header("Content-Type");
+});
+
+```
+```
+//response time
+pm.test("Validate response time less than 2 seconds",function(){
+    pm.expect(pm.response.responseTime).to.be.below(2000)
+});
+```
+```
+//response header
+pm.test("Validate the reponse header content type is present", function(){
+    pm.response.to.have.header("content-Type","application/json; charset=utf-8")
+});
+```
+```
+//response body
+var v = pm.response.json();//reading the api response and store in variable as a json object 
+pm.test("Verfy the response",function(){
+    pm.expect(v.booking.firstname).to.eql("Thilith"); //assert the results
+});
+```
+
+

@@ -1,0 +1,1 @@
+newman run --disable-unicode "C:\\Users\\MYPC\\Desktop\\New_folder\\API_Testing\\Booking_collection.json" -e "C:\\Users\\MYPC\\Desktop\\New_folder\\API_Testing\\Booking_environment.json" --reporters=cli,htmlextra
