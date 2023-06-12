@@ -21,7 +21,8 @@ Step 2: Post - Create a new booking in the database and generate an id
 
 fname and name getting from the environment variable
 
-![2023-05-28 16 52 38](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/40eacbd1-d070-4f34-992b-d73d9f13c187)
+![2023-05-28 16 52 38](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/e99d2552-c6b9-433e-a183-15bebe1ca93a)
+
 
 Step 3 : Get- Get Booking details created in above step 2
 Access id environmental variable using {{b_Id}}
