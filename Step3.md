@@ -27,7 +27,7 @@ pm.test("Verify checking date",function() {
 ```
 Test Results
 
-![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/b24f5b37-c5d3-403c-9eca-cb83a6a6d34c)
+![2023-06-01 19 05 26](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/8aa882a5-8e21-4a48-a24d-bd051e9ccd14)
 
 
 * Curl Command
