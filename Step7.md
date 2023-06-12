@@ -11,8 +11,7 @@ Create a Freestyle project -> add project name (BookingAPI) -> select build as E
 
 Then select project and click build now(Console output in below)
 
-![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/b5a7724d-1c1c-4c4b-b96a-6ded394b0f4c)
-
+![2023-06-10 18 26 16](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/699bfddd-3de1-4b9c-8f4c-56e74605d1bc)
 
 * CRON pattern 
 
@@ -43,7 +42,7 @@ newman run "CollectionfilePath\\FileName.json" -e "environmentFilePath\\FileName
 
 Output Files in workspace
 
-![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/a2a4715a-4c55-47ba-98dc-1536557fb610)
+![2023-06-10 18 28 23](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/bdd133f3-798b-41a6-af80-af2e45093872)
 
 
 
