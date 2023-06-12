@@ -44,7 +44,7 @@ Click run Booking Api.
 
 Below the success results
 
-![image](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/2f41a433-9e36-4e63-a7da-c64901c4609a)
+![2023-06-10 15 49 08](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/88a853e8-26cf-4eac-b8be-2fe705203978)
 
 ```
 //Test script for validate results
