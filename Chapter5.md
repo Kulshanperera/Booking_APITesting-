@@ -110,5 +110,6 @@ pm.test("Json Schema Validation", function(){
 ```
 
 Test result 
+
 ![2023-06-01 20 16 11](https://github.com/Kulshanperera/Booking_APITesting-/assets/47887463/e024d679-03b5-4c0c-b6b1-9b6a2d99f513)
 
